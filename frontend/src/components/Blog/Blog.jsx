@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Blog.css';
 import image from '../../images/vitamin.png';
+import { Link } from 'react-router-dom'
 
 const articles = [
   { id: 1, title: "Главная статья", overview: "Основная информация о теме.", date: "2025-02-03", image: image, link: "/articles/1" },
@@ -86,13 +87,15 @@ const Blog = () => {
 
       <div className="blog__carousel-container">
         {/* Left Arrow Button */}
+        {currentPage > 0 && (
         <button
           className="blog__button blog__button--left"
           onClick={handlePrev}
-          disabled={!canGoPrev()}
         >
           ←
         </button>
+      )}
+
 
         {/* ============== FIRST PAGE LAYOUT (2 rows, 5 articles) ============== */}
         {/* FIRST PAGE LAYOUT */}
@@ -100,6 +103,7 @@ const Blog = () => {
           <div className="blog__grid blog__grid--first-page">
             {/* Row 1: featured + 1 small */}
             {visibleArticles[0] && (
+              <Link to={visibleArticles[0].link} key={visibleArticles[0].id} style={{ display: "contents" }} className="blog__card-link">
               <div className="blog__main-article">
                 <img
                   src={visibleArticles[0].image}
@@ -107,17 +111,19 @@ const Blog = () => {
                   className="blog__main-image"
                 />
                 <div className="blog__main-content">
-                  <h2 className="blog__article-title">{visibleArticles[0].title}</h2>
+                  <h2 className="blog__main-article-title">{visibleArticles[0].title}</h2>
                   <p className="blog__main-date">{visibleArticles[0].date}</p> {/* date added */}
-                  <p className="blog__overview">{visibleArticles[0].overview}</p>
+                  <p className="blog__main-overview">{visibleArticles[0].overview}</p>
                   <a href={visibleArticles[0].link} className="blog__link blog__link_main">
                     Читать далее →
                   </a>
                 </div>
               </div>
+              </Link>
             )}
 
             {visibleArticles[1] && (
+              <Link to={visibleArticles[1].link} key={visibleArticles[1].id} className="blog__card-link">
               <div className="blog__card">
                 <img
                   src={visibleArticles[1].image}
@@ -133,10 +139,12 @@ const Blog = () => {
                   </a>
                 </div>
               </div>
+              </Link>
             )}
 
             {/* Row 2: next 3 articles */}
             {visibleArticles.slice(2).map((article) => (
+            <Link to={article.link} key={article.id} className="blog__card-link">
               <div key={article.id} className="blog__card">
                 <img
                   src={article.image}
@@ -152,6 +160,7 @@ const Blog = () => {
                   </a>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
         )}
@@ -160,6 +169,7 @@ const Blog = () => {
         {currentPage > 0 && (
           <div className="blog__grid blog__grid--uniform">
             {visibleArticles.map((article) => (
+              <Link to={article.link} key={article.id} className="blog__card-link">
               <div key={article.id} className="blog__card">
                 <img
                   src={article.image}
@@ -175,18 +185,20 @@ const Blog = () => {
                   </a>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
         )}
 
         {/* Right Arrow Button */}
-        <button
-          className="blog__button blog__button--right"
-          onClick={handleNext}
-          disabled={!canGoNext()}
-        >
-          →
-        </button>
+       {canGoNext() && (
+          <button
+            className="blog__button blog__button--right"
+            onClick={handleNext}
+          >
+            →
+          </button>
+        )}
       </div>
     </section>
   );

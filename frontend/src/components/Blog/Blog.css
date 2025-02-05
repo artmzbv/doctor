@@ -43,7 +43,7 @@
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     display: flex;
     height: 300px;
     transition: transform 0.3s ease-in-out;
@@ -79,10 +79,22 @@
     padding: 10px;
   }
   
+  .blog__main-article-title{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: black;
+  }
+
   .blog__article-title{
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
     font-weight: bold;
+    color: white;
+  }
+
+  .blog__main-overview{
+    color: black;
   }
   /* ---------------- SUBSEQUENT PAGES (2 rows x 3 columns = up to 6) ---------------- */
   .blog__grid--uniform {
@@ -167,8 +179,14 @@
     transition: background-color 0.3s;
     border-radius: 50%;
     z-index: 10;
+    transition: transform 0.3s ease-in-out;
   }
-  
+
+.blog__button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
   .blog__button--left {
     left: 20px;
   }
