@@ -1,0 +1,24 @@
+.aboutme{
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 65px);
+}
+
+
+.aboutme__description{
+    width: 50%;
+}
+
+.aboutme__title{
+    white-space: pre-wrap;
+    margin-left: 10px;
+}
+.aboutme__image-container{
+    width: 50vw;
+}
+
+.aboutme__image{
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+}

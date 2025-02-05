@@ -1,0 +1,171 @@
+.lectures{
+    height: calc(100vh - 65px);
+    background-color: #7AB3A5;
+    width: 90%;
+    padding: 20px 5%;
+}
+
+.lectures__title{
+    color: white;
+    text-align: center;
+}
+
+.lectures__description{
+    color: white;  
+}
+.lectures__card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 40px 0 20px;
+}
+
+.lectures__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 240px;
+    height: 320px;
+    background: linear-gradient(0deg, black, gray 70%, white);
+}
+
+.lectures__title{
+    width: 90%;
+    padding: 0 auto;
+}
+
+.lectures__image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    cursor: pointer; /* Change the cursor to indicate it's clickable */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+}
+
+/* Hover effect to make the image stand out more */
+.lectures__image:hover {
+    opacity: 1; /* Increase opacity on hover */
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
+}
+
+/* Optional: active state to simulate pressing the button */
+.lectures__image:active {
+    transform: scale(0.98); /* Slightly shrink on click to simulate a press */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Reduce shadow on press */
+}
+
+
+/* .lectures__image_hover{
+    opacity: 1;
+} */
+
+.lectures__card_copper:hover::before {
+    opacity: 0.8;
+}
+
+.lectures__name{
+    position: absolute;
+    color: white;
+    z-index: 2;
+    opacity:1 ;
+    white-space: pre-wrap;
+    font-size: 34px;
+}
+
+.lectures__subtitle{
+    text-decoration: none;
+    border: none;
+    background-color:  #001F3D;
+    text-align: start;
+    color: white;
+    width: 100%;
+    line-height: 32px;
+    font-size: 22px;
+    /* border-bottom: 4px white solid; */
+    margin:0;
+    margin-top: 4%;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 30px;
+    /* text-decoration: underline; */
+    height: 4vh;
+    margin-bottom: 30px;
+}
+
+.lectures__subtitle:hover{
+    color: #646060;
+}
+
+.lectures__link-insights{
+    text-decoration: none;
+}
+
+.lectures__button{ 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 50px;
+}
+@media screen and (max-width: 1300px) {
+    .lectures__card{
+        /* width: 22vw; */
+        height: 24vw;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .lectures__card{
+        width: 22vw;
+        height: 28vw;
+    }
+    
+    .lectures__name{
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .lectures__card{
+        width: 22vw;
+        height: 32vw;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .lectures__card{
+        width: 28vw;
+        height: 42vw;
+        scroll-snap-align: start;
+        cursor:'pointer'
+    }
+
+    .lectures__image{
+        object-fit:cover;
+        user-select: none;
+        /* pointer-events: none; */
+    }    
+}
+
+@media screen and (max-width: 450px) {
+    .lectures__card{
+        max-width: none;
+        width: 70vw;
+        height: 90vw;
+        margin-right: 30px;
+    }
+
+    .lectures__subtitle{
+        font-size: 16px;
+    }
+
+    .lectures__image{
+        width: 70vw;
+    }
+}
