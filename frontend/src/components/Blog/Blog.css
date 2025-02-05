@@ -1,5 +1,221 @@
-.blog{
-    height: calc(100vh - 65px);
-    border: solid 2px black;
-    background-color: #7AA5B3;
-}
+.blog {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .blog__title {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Carousel Container */
+  .blog__carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* ---------------- FIRST PAGE (5 articles, 2 rows) ---------------- */
+  .blog__grid--first-page {
+    display: grid;
+    /* 3 columns total for row 1 and row 2
+       Row 1: big featured (span 2 cols) + 1 small
+       Row 2: 3 small */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* "Featured" article that spans two columns */
+  .blog__main-article {
+    grid-column: span 2;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    height: 300px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .blog__main-article:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog__main-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .blog__main-content{
+    padding: 15px;
+    text-align: left;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .blog__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;               /* ensures text is above the image */
+    text-align: center;
+    width: 90%;               /* somewhat narrower than the card */
+    color: #fff;              /* white text */
+    padding: 10px;
+  }
+  
+  .blog__article-title{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  /* ---------------- SUBSEQUENT PAGES (2 rows x 3 columns = up to 6) ---------------- */
+  .blog__grid--uniform {
+    display: grid;
+    /* This ensures 2 rows and 3 columns, for up to 6 articles.
+       BUT we also use grid-auto-flow: column to place them top-left, bottom-left, 
+       then top-middle, bottom-middle, etc. */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-flow: column; /* fill columns top->bottom first */
+    gap: 20px;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* Card style for small articles */
+  .blog__card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%;
+    height: 300px;
+  }
+  
+  .blog__card:hover {
+    transform: translateY(-5px);
+  }
+
+
+  .blog__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+  
+  .blog__date {
+    font-size: 0.9rem;
+    color: white;
+    margin: 5px 0; /* some spacing */
+  }
+
+  .blog__main-date{
+    font-size: 0.9rem;
+    color: #777;
+    margin: 5px 0; /* some spacing */
+  }
+
+  .blog__link{
+    font-style: italic;
+    text-decoration: none;
+  }
+
+  .blog__link_ordinary{
+    color: white;
+  }
+
+  .blog__link_main{
+    color: black;
+  } 
+  
+  /* Buttons for scrolling */
+  .blog__button {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-color 0.3s;
+    border-radius: 50%;
+    z-index: 10;
+  }
+  
+  .blog__button--left {
+    left: 20px;
+  }
+  
+  .blog__button--right {
+    right: 20px;
+  }
+  
+  .blog__button:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+  }
+  
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 768px) {
+    /* Stack everything in one column if desired */
+    .blog__grid--first-page,
+    .blog__grid--uniform {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-auto-flow: row; /* revert normal flow on mobile */
+    }
+  
+    .blog__button {
+      display: none; /* optionally hide on mobile */
+    }
+  
+    .blog__main-article {
+      height: auto;
+      display: block;
+    }
+  
+    .blog__main-image {
+      width: 100%;
+      height: auto;
+    }
+  
+    .blog__content {
+      width: 100%;
+    }
+  
+    .blog__card {
+      height: auto;
+    }
+  
+    .blog__image {
+      height: auto;
+    }
+  }
+  
