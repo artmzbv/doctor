@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/artmzbv/doctor.git/static/css/main.873ed870.css",
+    "main.js": "/artmzbv/doctor.git/static/js/main.783a6ef6.js",
+    "static/js/488.e75445ad.chunk.js": "/artmzbv/doctor.git/static/js/488.e75445ad.chunk.js",
+    "static/media/vitamin.png": "/artmzbv/doctor.git/static/media/vitamin.23f6bdf56cc463ce97cc.png",
+    "static/media/doctor.jpeg": "/artmzbv/doctor.git/static/media/doctor.6ddb1f7a9b4a56ad164d.jpeg",
+    "static/media/404.jpg": "/artmzbv/doctor.git/static/media/404.ef18081acbdf8817888d.jpg",
+    "static/media/sticker.webp": "/artmzbv/doctor.git/static/media/sticker.18b7f79c8f377b012070.webp",
+    "static/media/Background.svg": "/artmzbv/doctor.git/static/media/Background.c7052af7849af57451172e59c2af782a.svg",
+    "static/media/telegram.svg": "/artmzbv/doctor.git/static/media/telegram.b39684d8a8c2a548aec79bb7f6c09a34.svg",
+    "index.html": "/artmzbv/doctor.git/index.html",
+    "static/media/burger.svg": "/artmzbv/doctor.git/static/media/burger.111cfc3a3545a9ff785c.svg",
+    "static/media/close-button.svg": "/artmzbv/doctor.git/static/media/close-button.396f7157a69a3b7c66df.svg",
+    "main.873ed870.css.map": "/artmzbv/doctor.git/static/css/main.873ed870.css.map",
+    "main.783a6ef6.js.map": "/artmzbv/doctor.git/static/js/main.783a6ef6.js.map",
+    "488.e75445ad.chunk.js.map": "/artmzbv/doctor.git/static/js/488.e75445ad.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.873ed870.css",
+    "static/js/main.783a6ef6.js"
+  ]
+}
