@@ -202,38 +202,135 @@
   
   /* ---------- Responsive ---------- */
   @media screen and (max-width: 768px) {
-    /* Stack everything in one column if desired */
-    .blog__grid--first-page,
-    .blog__grid--uniform {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto;
-      grid-auto-flow: row; /* revert normal flow on mobile */
-    }
-  
-    .blog__button {
-      display: none; /* optionally hide on mobile */
+    /* ---------- FIRST PAGE ---------- */
+    .blog__grid--first-page {
+      /* 2 columns × 3 rows 
+         => first row: "a a" (featured spans 2 columns)
+         => second row: 2 small articles
+         => third row: final 2 small articles
+      */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto auto; /* 3 rows */
+      grid-auto-flow: row; 
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+      justify-content: center;
+      align-items: start;
     }
   
     .blog__main-article {
-      height: auto;
-      display: block;
+      /* Force the featured article to span both columns on row 1 */
+      grid-column: 1 / span 2;
+      height: auto; /* let it expand to fit content */
+      display: flex; /* keep the "split" layout if you like */
     }
   
     .blog__main-image {
-      width: 100%;
+      width: 50%;
       height: auto;
+      object-fit: cover;
     }
   
-    .blog__content {
+    /* If you prefer the text below the image for mobile, you could 
+       do 'display: block' or remove the 50/50 split. 
+       But I'll leave it as is for demonstration. */
+  
+    /* ---------- SUBSEQUENT PAGES ---------- */
+    .blog__grid--uniform {
+      /* 2 columns × 3 rows => up to 6 articles in normal row order */
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: repeat(3, auto); /* 3 rows */
+      grid-auto-flow: row; 
+      gap: 20px;
+      padding: 20px;
       width: 100%;
+      max-width: 1200px;
+      justify-content: center;
+      align-items: start;
     }
-  
+
+    .blog__main-article {
+      height: 250px; 
+    }      /* Remove forced height on cards if you want them to expand */
+    
     .blog__card {
-      height: auto;
+      height: 250px; 
     }
   
     .blog__image {
       height: auto;
     }
+  
+    /* If desired, show/hide arrow buttons differently on mobile */
+    /* .blog__button { display: none; } */
   }
   
+  
+  @media screen and (max-width: 500px) {
+    .blog__main-article {
+      height: 200px; 
+    }      /* Remove forced height on cards if you want them to expand */
+    
+    .blog__card {
+      height: 200px; 
+    }
+    .blog__content{
+      top: 45%;
+      padding: 5px;
+    }
+
+    .blog__article-title{
+      font-size: 1em;
+      margin-top: 0;
+    }
+    .blog__overview{
+      font-size: 12px;
+    }
+    .blog__link{
+      font-size: 12px;
+    }
+    .blog__date{
+      font-size: 10px;   
+    }
+
+    .blog__main-date{
+      font-size: 10px;     
+    }
+    .blog__main-overview{
+      font-size: 12px;  
+    }
+
+    .blog__button--right{
+      right: 5px;
+    }
+    .blog__button--left{
+      left: 5px; 
+    }
+  }
+
+  @media screen and (max-width: 330px) {
+    .blog__main-article {
+      height:150px; 
+    }      /* Remove forced height on cards if you want them to expand */
+    
+    .blog__card {
+      height: 150px; 
+    }
+    .blog__content{
+      top: 50%;
+      padding: 5px;
+    }
+    .blog__main-article-title{
+      margin: 8px 0;
+    }
+    .blog__main-date{
+      margin: 0;
+    }
+    .blog__button--right{
+      padding: 5px 10px;
+    }
+  }
