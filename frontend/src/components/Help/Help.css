@@ -9,7 +9,7 @@
     flex-wrap: wrap;
 }
 
-.help___card{
+.help__card{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -63,4 +63,29 @@
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .help{
+        height: 100%;
+        margin-bottom: 50px;
+    }
+
+    .help__name{
+        text-align: center;
+    }
+
+    .help__card{
+        width: 40%;
+    }
+
+    .help__card-container{
+        justify-content:space-around;
+    } 
+}
+
+@media screen and (max-width: 450px) {
+    .help__card{
+        width:80%;
+    }
 }

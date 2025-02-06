@@ -18,6 +18,7 @@
     flex-direction: row;
     justify-content: space-around;
     margin: 40px 0 20px;
+    border-radius: 8px; 
 }
 
 .lectures__card{
@@ -29,6 +30,7 @@
     width: 240px;
     height: 320px;
     background: linear-gradient(0deg, black, gray 70%, white);
+    border-radius: 8px; 
 }
 
 .lectures__title{
@@ -42,8 +44,8 @@
     opacity: 0.8;
     cursor: pointer; /* Change the cursor to indicate it's clickable */
     transition: all 0.3s ease; /* Smooth transition for hover effects */
-    border-radius: 8px; /* Optional: add rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.6); 
+    border-radius: 8px; 
 }
 
 /* Hover effect to make the image stand out more */
