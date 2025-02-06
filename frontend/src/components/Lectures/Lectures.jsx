@@ -14,7 +14,7 @@ const Lectures = () => {
           <h3 className='lectures__description'>Доктор Зубова также читает лекции по темам связанным с женским физическим и психологическим здоровьем</h3>
           <div className='lectures__card-container'>
           {lectures.map((lecture) =>
-        <Link to={lecture.link} target="_blank" className='lectures__card'>
+        <Link to={lecture.link} target="_blank" className='lectures__card' key={lecture.alt}>
         <img className={`lectures__image  ${hover ? 'lectures__image_hover' : null}`}
             src={lecture.src} 
             onMouseOver={()=>setHover(true)}

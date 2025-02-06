@@ -1,5 +1,5 @@
 .footer{
-    background-color: black;
+    background-color: #1A1A1A;
     display: flex;
     flex-direction: column;
 }
@@ -20,7 +20,7 @@
     font-size: 14px;
     font-family: inherit;
     text-decoration: none;
-    background-color: black;
+    background-color: inherit;
     border: none;
     cursor: pointer;
     /* font-weight: bold; */
