@@ -25,7 +25,7 @@ const Lectures = () => {
           )}
           </div>
           <div className='lectures__button'>
-          <Button value={"Записаться на прием"} />
+          <Button value={"Заказать лекцию"} type={"lectures"}/>
           </div>
         </section>
     );

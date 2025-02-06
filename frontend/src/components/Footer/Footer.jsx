@@ -95,7 +95,7 @@ export default function Footer() {
             <Link className="footer__reg-link" to="./cookie-policy">{`Куки`}</Link>
             <Link className="footer__reg-link" to="./terms-of-use">{`Политика пользования`}</Link>
             <Link className="footer__reg-link" to="./privacy-policy">{`Политика приватности`}</Link>
-            <Link target="_blank" to="https://www.instagram.com/self_made_portraits?igsh=MXhoZjdkc21pdWZpbg%3D%3D&utm_source=qr">
+            <Link target="_blank" to="https://www.instagram.com/">
               <img className="footer__reg-logo footer__reg-logo_x" src={telegram} alt="telegram" />
             </Link>
           </div>

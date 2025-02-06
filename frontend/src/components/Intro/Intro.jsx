@@ -24,11 +24,11 @@ const Intro = () => {
           <div className='intro__text'>
             <h1 className='intro__title'>{`Гинеколог\nЭндокринолог`}</h1>
                 <ul className='intro__list'>
-                <li className='intro__subtitle'>Доктор Зубова - к.м.н. акушер-гинеколог врач УЗИ консультант по</li>
+                <li className='intro__subtitle'>Доктор Зубова - к.м.н., акушер-гинеколог врач УЗИ консультант по</li>
                 <li className='intro__subtitle'>когнитивно-поведенческой и телеесной психотерапии в Москве</li>
                 </ul>
                 <div className='intro__button'>
-                <Button value={"Записаться на прием"} />
+                <Button value={"Записаться на прием"} type={"schedule"}/>
                 </div>
           </div>
           <div className='intro__picture-container'>
