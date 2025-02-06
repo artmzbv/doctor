@@ -140,32 +140,56 @@
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 655px) {
     .lectures{
         height: 100%;
         margin-bottom: 50px;
     }
+/* ---------- Dots Indicator ---------- */
+.lectures__dots {
+    display: none; /* hide by default on desktop, if you want */
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .lectures__dot {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30%;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+  }
 
-    .lectures__card{
-        width: 28vw;
-        height: 42vw;
-        scroll-snap-align: start;
-        cursor:'pointer'
+  
+  .lectures__dot_active {
+    background-color: #DE5F80;; /* highlight color for active slide */
+  }
+  
+    /* Make the container horizontally scrollable, snap each card to screen width */
+    .lectures__card-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory; /* snap horizontally */
+      -webkit-overflow-scrolling: touch; /* smoother scrolling on iOS */
+      justify-content: flex-start; /* let them line up left to right */
     }
-
-    .lectures__image{
-        object-fit:cover;
-        user-select: none;
-        /* pointer-events: none; */
-    }    
-}
-
-@media screen and (max-width: 450px) {
-    .lectures__card{
-        max-width: none;
-        width: 70vw;
-        height: 90vw;
-        margin-right: 30px;
+  
+    /* Each card is the full viewport width (or a bit less if you want partial slides) */
+    .lectures__card {
+      scroll-snap-align: start; /* or center */
+      margin-right: 0; 
+      cursor:'pointer';
+      max-width: none;
+      width: 70vw;
+      height: 80vw;
+      margin-right: 30px;
+    }
+  
+    /* Show the dots on mobile */
+    .lectures__dots {
+      display: flex; 
     }
 
     .lectures__subtitle{
@@ -174,5 +198,7 @@
 
     .lectures__image{
         width: 70vw;
+        object-fit:cover;
+        user-select: none;
     }
 }
