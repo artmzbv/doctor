@@ -17,9 +17,6 @@
     text-align: center;
 }
 
-.not-found__text{
-    color: black;
-}
 
 .not-found__button{
     border: none;
@@ -44,7 +41,7 @@
 }
 
 .not-found__button:hover{
-    background-color: #ff9900;
+    background-color: #DE5F80;
     color: white;
     border: none;   
 }
