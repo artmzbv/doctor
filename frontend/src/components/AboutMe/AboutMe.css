@@ -46,3 +46,20 @@
     margin-right: 10px; /* Space between line and text */
   }
   
+@media screen and (max-width: 768px) {
+    .aboutme{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    .aboutme__description{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+     justify-content: center;
+    }
+    .aboutme__image{
+        /* width: 400px; */
+        margin: 0 auto;
+    }
+}

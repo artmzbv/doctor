@@ -141,6 +141,11 @@
 
 
 @media screen and (max-width: 768px) {
+    .lectures{
+        height: 100%;
+        margin-bottom: 50px;
+    }
+
     .lectures__card{
         width: 28vw;
         height: 42vw;
