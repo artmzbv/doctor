@@ -75,66 +75,27 @@
    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
     .intro {
     min-height: 616px;
     height: auto;
-    /* background-image: url(../../images/intro/webp-test-mobile_.webp); */
+        /* background-image: url(../../images/intro/webp-test-mobile_.webp); */
     background-size: 90% 90%;
     background-position-y: 20px;
-   }
+    }    
 
    .intro__text {
     padding-top: 0px;
+    width: 88%;
     margin-left: 10%;
    }
-   .intro__title{
-    margin-top: 0;
-    text-align: start;
-   }
-   .intro__subtitle{
-    text-align: start;
-   }
 
-    .intro__buttons{
-    flex-direction: column;
-    align-items: center;
-    margin-top: 200px;
-    width: 100%; 
-    height: 100px;
-    }
-
-    .intro__container{
-    display:flex;
-    flex-direction: column; 
-    justify-content: flex-start;
-    margin-top: 35px;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    }
-    
-    /* .intro__subtitle{
-    text-align: center;
-    } */
-}
-
-@media screen and (max-width: 800px) {
-    .intro {
-    background-size: 90% 70%;
-    background-image: none;
-    position: relative;
-    padding-bottom: 30px;
-   }
-   .intro__text{
-   width: 88%;
-   }
    .intro__mobile-container {
     display:flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-  }
+   }
 
    .intro__picture{
     display: block;
@@ -143,9 +104,11 @@
     object-fit: contain;
     margin-top: 20px;
     margin-bottom: 20px;
-}
+    }
 
    .intro__title {
+    margin-top: 0;
+    text-align: start;
     background-size: 90% 70%;
    }
 
@@ -169,15 +132,52 @@
     left: 10%;
     margin-left: 0;
     }
+    .intro__button{
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%; 
+        height: 100px;
+        margin-top: 30px;
+    }
+    .intro__container{
+        display:flex;
+        flex-direction: column; 
+        justify-content: flex-start;
+        margin-top: 35px;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 500px) {
+    .intro{
+        height: 100%;
+        padding-bottom: 50px;
+    }
     .intro__title {
         margin-bottom: 20px;
-        font-size: 20px
+        font-size: 24px;
+        white-space: unset;
       }
+    
+    .intro__picture-container{
+        width: 90%;
+    }
+    .intro__picture{
+        width: 100%;
+        margin: 0;
+    }
 
     .intro__text {
         margin-left: 0px;
+    }
+    .intro__button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        height: 100%;   
     }
 } 
