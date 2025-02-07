@@ -217,7 +217,7 @@
         margin: 0;
     }
     .navigation__link_main {
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid white;
     }
     .navigation__link:hover {
         color: black;

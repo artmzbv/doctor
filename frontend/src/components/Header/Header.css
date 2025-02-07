@@ -98,7 +98,7 @@
     /* justify-content: flex-start; */
     /* align-items: center; */
     /* padding: 22px 22px 90px; */
-    background-color: white;
+    background-color: #7AA5B3;
     width:100vw;
     /* max-width: 520px;
     width: 100%; */
@@ -146,7 +146,8 @@
 @media screen and (max-width: 1024px) {
 .header{
     height: 65px;
-    /* height: calc(var(--vh, 1vh) * 10); */
+    justify-content: flex-end;
+    /* height: utalc(var(--vh, 1vh) * 10); */
 }
 
 .header__phone{
@@ -224,7 +225,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-color: white;
+    background-color: inherit;
 }
 
 .header__links-column-container{
