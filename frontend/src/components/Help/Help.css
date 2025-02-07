@@ -1,5 +1,6 @@
 .help{
     height: calc(100vh - 65px);
+    margin-bottom: 50px;
 }
 
 .help__card-container{
