@@ -7,7 +7,7 @@ export default function PageNotFound () {
       <section className="not-found">
         <h1 className="not-found__title">{`Страница\nне найдена`}</h1>
         <img className="not-found__image" src={''} alt=""/>
-        <Link to="/">
+        <Link to="/doctor">
             <button className="not-found__button">
             <p className="not-found__text">На главную страницу</p>
             </button>

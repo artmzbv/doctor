@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Header activeSection={activeSection} setActiveSection={setActiveSection}/>
     <Routes>
-      <Route exact path="/" element={<Main activeSection={activeSection} setActiveSection={setActiveSection} />}/>
+      <Route exact path="/doctor" element={<Main activeSection={activeSection} setActiveSection={setActiveSection} />}/>
       <Route path="*" element={<PageNotFound />} />
       </Routes>
     <Footer/>

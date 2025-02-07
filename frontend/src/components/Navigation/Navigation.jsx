@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import headerLogo from "../../images/headerLogo.svg"
 // import Button from "../common/Button/Button";
 import "./Navigation.css";
 
@@ -74,7 +75,14 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
       >
         Лекции
       </button>
-      <h1 className="navigation__name">ДОКТОР ОЛИЯ ЗУБОВА</h1>
+        <Link to="/doctor">
+          <img
+            id={"0"}
+            className="navigation__logo"
+            src={headerLogo}
+            alt="logo"
+          />
+        </Link>
       <button
         id="3"
         className={`navigation__link navigation__link_main ${activeSection === "aboutme" && location.pathname === "/" ? "navigation__link_active" : ""}`}

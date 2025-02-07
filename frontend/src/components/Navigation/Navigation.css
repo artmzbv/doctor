@@ -16,10 +16,7 @@
 }
 
 .navigation__logo{
-    position: absolute;
-    bottom: 2px;
-    right: -18px;
-    width: 40px;
+    width: 250px;
     height: 40px;
     cursor: pointer;
 }
