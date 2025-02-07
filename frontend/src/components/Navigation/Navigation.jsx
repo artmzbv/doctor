@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import headerLogo from "../../images/headerLogo.svg"
-// import Button from "../common/Button/Button";
+import Button from '../Button/Button'
 import "./Navigation.css";
 
 function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
@@ -75,6 +75,13 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
       >
         Лекции
       </button>
+      <button
+        id="3"
+        className={`navigation__link navigation__link_main ${activeSection === "aboutme" && location.pathname === "/" ? "navigation__link_active" : ""}`}
+        onClick={(e) => handleNavigationClick(e, "aboutme")}
+      >
+        Обо мне
+      </button>
         <Link to="/doctor">
           <img
             id={"0"}
@@ -83,13 +90,6 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
             alt="logo"
           />
         </Link>
-      <button
-        id="3"
-        className={`navigation__link navigation__link_main ${activeSection === "aboutme" && location.pathname === "/" ? "navigation__link_active" : ""}`}
-        onClick={(e) => handleNavigationClick(e, "aboutme")}
-      >
-        Обо мне
-      </button>
       <button
         id="4"
         className={`navigation__link navigation__link_main ${activeSection === "blog" && location.pathname === "/" ? "navigation__link_active" : ""}`}
@@ -102,9 +102,9 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
         className={`navigation__link navigation__link_main ${activeSection === "contact" && location.pathname === "/" ? "navigation__link_active" : ""}`}
         onClick={(e) => handleNavigationClick(e, "contact")}
       >
-        Запись на прием
+        Контакты
       </button>
-
+      <Button value={"Записаться на прием"} type={"schedule"}/>
       {/* BOOK NOW button should navigate to a different page and close menu */}
       {/* <Button
         book={true}
