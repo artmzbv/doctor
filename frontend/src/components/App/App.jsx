@@ -22,9 +22,9 @@ function App() {
     <Routes>
       <Route exact path="/doctor" element={<Main activeSection={activeSection} setActiveSection={setActiveSection} />}/>
       <Route path="*" element={<PageNotFound />} />
-      <Route path="/doctor/:service" element={<Service />} />
-      <Route path="/doctor/:lecture" element={<Lecture />} />
-      <Route path="/doctor/:time" element={<TimeBooking />} />
+      <Route path="/:service" element={<Service />} />
+      <Route path="/:lecture" element={<Lecture />} />
+      <Route path="/:time" element={<TimeBooking />} />
       <Route path="/articles/:article" element={<Article />} />
       </Routes>
     <Footer/>
