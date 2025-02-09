@@ -3,6 +3,7 @@ import './Lectures.css';
 import { Link } from 'react-router-dom';
 import { lectures } from '../../utils/constants/constants';
 import Button from '../Button/Button';
+import Lecture from '../Lecture/Lecture';
 
 const Lectures = () => {
   const [hover, setHover] = useState(false);
@@ -45,10 +46,11 @@ const Lectures = () => {
       >
         {lectures.map((lecture, idx) => (
           <Link
-            to={lecture.link}
+            to={`/lectures/${lecture.id}`} 
             // target='_blank'
             className='lectures__card'
             key={lecture.alt}
+            element={Lecture}
           >
             <img
               className={`lectures__image ${

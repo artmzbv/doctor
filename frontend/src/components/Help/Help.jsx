@@ -13,7 +13,7 @@ const Help = () => {
           <div className='help__card-container'>
           {services.map((service) =>
           // target="_blank"
-        <Link  to={service.link} className='help__card' key={service.alt} element={Service}>
+        <Link  to={`/services/${service.id}`} className='help__card' key={service.alt} element={Service}>
         <div className="help__image-container">
         <img className={`help__image  ${hover ? 'help__image_hover' : null}`}
             src={service.src} 

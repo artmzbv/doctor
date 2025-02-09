@@ -3,18 +3,18 @@ import icon from '../../images/icons/Background.svg'
 import image from '../../images/vitamin.png';
 
 export const lectures = [
-    {title:'Витамин D', description: 'a', src: vitamin, link: '/lectures/1', alt: 'vitamin1'},
-    {title:'Витамин D', description: 'b', src: vitamin, link: '/lectures/2', alt: 'vitamin2'},
-    {title:'Витамин D', description: 'c', src: vitamin, link: '/lectures/3' ,alt: 'vitamin3'},
+    {title:'Витамин D', description: 'a', src: vitamin, id: 1, alt: 'vitamin1'},
+    {title:'Витамин D', description: 'b', src: vitamin, id: 2, alt: 'vitamin2'},
+    {title:'Витамин D', description: 'c', src: vitamin, id: 3 ,alt: 'vitamin3'},
 ]
  
 export const services = [
-    {title:'Консультации', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon , link: '/services/1', alt: 'service1'},
-    {title:'УЗИ', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, link: '/services/2' ,alt: '/service2'},
-    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, link: '/services/3', alt: 'service3'},
-    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, link: '/services/4', alt: 'service4'},
-    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, link: '/services/5' ,alt: 'service5'},
-    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, link: '/services/6', alt: 'service6'},
+    {title:'Консультации', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon , id: 1, alt: 'service1'},
+    {title:'УЗИ', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, id: 2 ,alt: '/service2'},
+    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, id: 3, alt: 'service3'},
+    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, id: 4, alt: 'service4'},
+    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, id: 5 ,alt: 'service5'},
+    {title:'Ведение беремености', description: `Одно предложение\nОдно предложение`, src: vitamin, icon: icon, id: 6, alt: 'service6'},
 ]
 
 export const articles = [

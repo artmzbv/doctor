@@ -1,4 +1,9 @@
 .service{
+    padding-top: 65px;
     height: calc(100vh - 65px);
-    margin-bottom: 50px;
+}
+
+.service__image{
+    width: 200px;
+    height: 200px;
 }
