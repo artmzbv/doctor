@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Button.css';
   
-  const Button = ({ book, value, type }) => {
+  const Button = ({ value, type }) => {
     let path = '';
   
     // Define the link path based on the type of booking
-    if (book && type === 'schedule') {
-      path = '/schedule'; // Book a time slot
+    if ( type === 'schedule') {
+      path = '/doctor/time'; // Book a time slot
     } else {
-      path = '/lectures'; // Parent path for gift booking
+      path = '/doctor/lectures'; // Parent path for gift booking
     }
   
     return (

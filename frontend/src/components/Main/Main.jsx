@@ -71,6 +71,7 @@ export default function Main({ setActiveSection }) {
          <Intro />
          <Help />
          <Lectures />
+         
          <AboutMe />
          <Blog />
          <Contact />
