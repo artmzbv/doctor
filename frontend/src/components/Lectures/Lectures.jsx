@@ -46,7 +46,7 @@ const Lectures = () => {
         {lectures.map((lecture, idx) => (
           <Link
             to={lecture.link}
-            target='_blank'
+            // target='_blank'
             className='lectures__card'
             key={lecture.alt}
           >

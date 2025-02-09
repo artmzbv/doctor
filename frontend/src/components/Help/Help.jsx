@@ -12,7 +12,8 @@ const Help = () => {
           <h1 className='help__title'>{`ЧЕМ Я МОГУ ВАМ ПОМОЧЬ?`}</h1>
           <div className='help__card-container'>
           {services.map((service) =>
-        <Link  to={service.link} target="_blank" className='help__card' key={service.alt} element={Service}>
+          // target="_blank"
+        <Link  to={service.link} className='help__card' key={service.alt} element={Service}>
         <div className="help__image-container">
         <img className={`help__image  ${hover ? 'help__image_hover' : null}`}
             src={service.src} 
