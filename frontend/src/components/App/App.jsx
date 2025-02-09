@@ -5,6 +5,7 @@ import Header from "../Header/Header"
 import Footer from "../Footer/Footer"
 import Main from "../Main/Main"
 import PageNotFound from "../PageNotFound/PageNotFound"
+import Service from "../Service/Service"
 import { usePageTracking } from "../../utils/tracking";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
     <Routes>
       <Route exact path="/doctor" element={<Main activeSection={activeSection} setActiveSection={setActiveSection} />}/>
       <Route path="*" element={<PageNotFound />} />
+      <Route path="/doctor/:service" element={<Service />} />
       </Routes>
     <Footer/>
     </div>

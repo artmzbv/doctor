@@ -1,0 +1,4 @@
+.service{
+    height: calc(100vh - 65px);
+    margin-bottom: 50px;
+}
