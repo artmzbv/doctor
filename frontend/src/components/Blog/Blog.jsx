@@ -91,7 +91,7 @@ const Blog = () => {
           <div className="blog__grid blog__grid--first-page">
             {/* Row 1: featured + 1 small */}
             {visibleArticles[0] && (
-              <Link to={visibleArticles[0].link} key={visibleArticles[0].id} style={{ display: "contents" }} className="blog__card-link">
+              <Link to= {`/articles/${visibleArticles[0].id}`} key={visibleArticles[0].id} style={{ display: "contents" }} className="blog__card-link">
               <div className="blog__main-article">
                 <img
                   src={visibleArticles[0].image}
@@ -111,7 +111,7 @@ const Blog = () => {
             )}
 
             {visibleArticles[1] && (
-              <Link to={visibleArticles[1].link} key={visibleArticles[1].id} className="blog__card-link">
+              <Link to= {`/articles/${visibleArticles[1].id}`} key={visibleArticles[1].id} className="blog__card-link">
               <div className="blog__card">
                 <img
                   src={visibleArticles[1].image}
@@ -132,7 +132,7 @@ const Blog = () => {
 
             {/* Row 2: next 3 articles */}
             {visibleArticles.slice(2).map((article) => (
-            <Link to={article.link} key={article.id} className="blog__card-link">
+            <Link to={`/articles/${article.id}`} key={article.id} className="blog__card-link">
               <div key={article.id} className="blog__card">
                 <img
                   src={article.image}
@@ -157,7 +157,7 @@ const Blog = () => {
         {currentPage > 0 && (
           <div className="blog__grid blog__grid--uniform">
             {visibleArticles.map((article) => (
-              <Link to={article.link} key={article.id} className="blog__card-link">
+              <Link to={`/articles/${article.id}`} key={article.id} className="blog__card-link">
               <div key={article.id} className="blog__card">
                 <img
                   src={article.image}

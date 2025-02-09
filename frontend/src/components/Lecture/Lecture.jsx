@@ -6,10 +6,10 @@ import { lectures } from '../../utils/constants/constants';
 const Lecture = () => {
   const { id } = useParams(); 
   // Convert the id to a number if needed (assuming service.id is numeric)
-  const serviceId = Number(id);
+  const lectureId = Number(id);
 
   // Find the service from the array using the id.
-  const currentLecture = lectures.find((service) => service.id === serviceId);
+  const currentLecture = lectures.find((lecture) => lecture.id === lectureId);
     return (
       <section className='lecture' id='lecture'>
       <h2 className='lecture__title'>{currentLecture.title}</h2>
