@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
 import './Blog.css';
-import image from '../../images/vitamin.png';
 import { Link } from 'react-router-dom'
-
-const articles = [
-  { id: 1, title: "Главная статья", overview: "Основная информация о теме.", date: "2025-02-03", image: image, link: "/articles/1" },
-  { id: 2, title: "Как сохранить здоровье", overview: "Полезные советы и рекомендации.", date: "2025-02-03", image: image, link: "/articles/2" },
-  { id: 3, title: "Гормональный баланс", overview: "Как поддерживать баланс гормонов?", date: "2025-02-03", image: image, link: "/articles/3" },
-  { id: 4, title: "Зачем нужно УЗИ?", overview: "Когда и зачем делать диагностику?", date: "2025-02-03", image: image, link: "/articles/4" },
-  { id: 5, title: "Питание и здоровье", overview: "Какие продукты полезны?", image: image, date: "2025-02-03", link: "/articles/5" },
-  { id: 6, title: "Физическая активность", overview: "Как физическая нагрузка влияет на организм?", date: "2025-02-03", image: image, link: "/articles/6" },
-  { id: 7, title: "Психология и здоровье", overview: "Как управлять стрессом?", image: image, date: "2025-02-03", link: "/articles/7" },
-  { id: 8, title: "Физическая активность", overview: "Как физическая нагрузка влияет на организм?", image: image, date: "2025-02-03", link: "/articles/8" },
-  { id: 9, title: "Психология и здоровье", overview: "Как управлять стрессом?", image: image, date: "2025-02-03", link: "/articles/9" }
-];
+import {articles} from '../../utils/constants/constants'
 
 const Blog = () => {
   // We'll use "currentPage" to indicate which "screen" or page of the carousel

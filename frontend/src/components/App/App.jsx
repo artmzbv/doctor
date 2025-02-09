@@ -7,6 +7,7 @@ import Main from "../Main/Main"
 import PageNotFound from "../PageNotFound/PageNotFound"
 import Service from "../Service/Service"
 import Lecture from "../Lecture/Lecture"
+import Article from "../Article/Article"
 import TimeBooking from "../TimeBooking/TimeBooking";
 import { usePageTracking } from "../../utils/tracking";
 
@@ -24,6 +25,7 @@ function App() {
       <Route path="/doctor/:service" element={<Service />} />
       <Route path="/doctor/:lecture" element={<Lecture />} />
       <Route path="/doctor/:time" element={<TimeBooking />} />
+      <Route path="/articles/:article" element={<Article />} />
       </Routes>
     <Footer/>
     </div>
