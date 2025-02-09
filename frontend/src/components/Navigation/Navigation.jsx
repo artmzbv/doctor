@@ -36,17 +36,17 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
   // Handle menu button click
   const handleNavigationClick = (e, sectionId) => {
     setActive(e.target.id);
-    if (location.pathname === "/") {
+    if (location.pathname === "/doctor") {
       scrollToSection(sectionId); // If already on main page, scroll to the section
     } else {
       setTargetSection(sectionId); // Store the section ID to scroll after navigation
-      navigate("/"); // Redirect to main page
+      navigate("/doctor"); // Redirect to main page
     }
   };
 
   // Effect to scroll to the target section after navigating to the main page
   useEffect(() => {
-    if (location.pathname === "/" && targetSection) {
+    if (location.pathname === "/doctor" && targetSection) {
       scrollToSection(targetSection); // Scroll to the stored section
       setTargetSection(null); // Clear target section after scrolling
     }
@@ -54,7 +54,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
 
   // Effect to reset active state when navigating away from the main page
   useEffect(() => {
-    if (location.pathname !== "/") {
+    if (location.pathname !== "/doctor") {
       setActive(""); // Reset active state
     }
   }, [location.pathname]);
