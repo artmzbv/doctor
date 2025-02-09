@@ -27,11 +27,11 @@ export default function Footer() {
   // Handle navigation button click
   const handleNavigationClick = (e, sectionId) => {
     setActive(e.target.id);
-    if (location.pathname === "/") {
+    if (location.pathname === "/doctor") {
       scrollToSection(sectionId); // Scroll to the section if on the main page
     } else {
       setTargetSection(sectionId); // Store the section ID for scrolling after navigation
-      navigate("/"); // Redirect to the main page
+      navigate("/doctor"); // Redirect to the main page
     }
   };
 
