@@ -10,4 +10,4 @@ const LectureBooking = () => {
   };
   
 
-export default TimeBooking;
+export default LectureBooking;

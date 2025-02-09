@@ -7,9 +7,9 @@ import './Button.css';
   
     // Define the link path based on the type of booking
     if ( type === 'schedule') {
-      path = '/doctor/time'; // Book a time slot
+      path = '/time-booking'; // Book a time slot
     } else {
-      path = '/doctor/lectures'; // Parent path for gift booking
+      path = '/lectures-booking'; // Parent path for gift booking
     }
   
     return (

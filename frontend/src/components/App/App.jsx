@@ -9,6 +9,7 @@ import Service from "../Service/Service"
 import Lecture from "../Lecture/Lecture"
 import Article from "../Article/Article"
 import TimeBooking from "../TimeBooking/TimeBooking";
+import LectureBooking from "../LectureBooking/LectureBooking";
 import { usePageTracking } from "../../utils/tracking";
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
     <Routes>
       <Route exact path="/doctor" element={<Main activeSection={activeSection} setActiveSection={setActiveSection} />}/>
       <Route path="*" element={<PageNotFound />} />
-      <Route path="/:service" element={<Service />} />
-      <Route path="/:lecture" element={<Lecture />} />
-      <Route path="/:time" element={<TimeBooking />} />
+      <Route path="/services/:service" element={<Service />} />
+      <Route path="/lectures/:lecture" element={<Lecture />} />
+      <Route path="/time-booking" element={<TimeBooking />} />
+      <Route path="/lecture-booking" element={<LectureBooking />} />
       <Route path="/articles/:article" element={<Article />} />
       </Routes>
     <Footer/>
