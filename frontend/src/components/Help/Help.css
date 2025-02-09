@@ -17,6 +17,9 @@
     align-items: center;
     width: 33%;
     margin-top: 20px;
+    text-decoration: none;
+    font-style: normal; 
+    text-align: center; 
 }
 
 .help__image-container{
@@ -55,6 +58,7 @@
     white-space: pre-wrap;
 }
 
+
 .help__button{
     background-color: #7AA5B3;
     border: none;
@@ -64,6 +68,13 @@
     border-radius: 5px;
     margin-top: 10px;
     cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.help__button:hover{
+    opacity: 1; /* Increase opacity on hover */
+    transform: scale(1.05); /* Slightly enlarge the image */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Add a stronger shadow on hover */
 }
 
 @media screen and (max-width: 800px) {
