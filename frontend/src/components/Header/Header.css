@@ -127,12 +127,12 @@
 
 @media screen and (max-width: 1200px) {
     .header{
-        width: 93vw;
-        padding: 0 2vw 0 5vw;
+        width: 100%;
+        padding: 0;
     }
 
     .header__navigation{
-        width: 90%;
+        width: 98%;
     }
 
     .header__network{
@@ -143,15 +143,20 @@
 
 @media screen and (max-width: 1024px) {
 .header{
+    width: 90%;
+    padding: 0 5%;
     height: 65px;
-    justify-content: flex-end;
-    /* height: utalc(var(--vh, 1vh) * 10); */
+    justify-content: space-between;
 }
 
 .header__phone{
     margin-right: 5px;
     font-size: 10px;
 }
+
+/* .header__navigation{
+    width: 90%;
+} */
 
 .header__instagram-link{
     display: flex;
@@ -191,6 +196,7 @@
     cursor: pointer;
     object-fit: fill;
 }
+
 .header__links-row {
     display: none;
 }

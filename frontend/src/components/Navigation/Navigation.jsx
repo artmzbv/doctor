@@ -107,7 +107,9 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
       >
         Контакты
       </button>
+      <div className="navigation__button">
       <Button value={"Записаться на прием"} type={"schedule"}/>
+      </div>
       </div>
     </>
   );
