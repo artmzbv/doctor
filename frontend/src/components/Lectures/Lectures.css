@@ -11,8 +11,10 @@
 }
 
 .lectures__description{
-    color: white;  
+    color: white; 
+    text-align: center; 
 }
+
 .lectures__card-container{
     display: flex;
     flex-direction: row;
@@ -31,11 +33,6 @@
     height: 320px;
     background: linear-gradient(0deg, black, gray 70%, white);
     border-radius: 8px; 
-}
-
-.lectures__title{
-    width: 90%;
-    padding: 0 auto;
 }
 
 .lectures__image {
