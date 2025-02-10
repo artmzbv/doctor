@@ -257,9 +257,9 @@
         border-bottom: 1px solid white;
     }
 
-    .navigation__link:hover {
+    /* .navigation__link:hover {
         color: black;
-    }
+    } */
 
     .navigation__link_active {
         color: #FF9900;
@@ -312,5 +312,13 @@
         font-size: 16px;
         font-weight: bold;
         color: black;
+    }
+
+    /* Apply bottom border when submenu is active */
+    .navigation__link_button.navigation__link_active {
+        border-bottom: none;
+    }
+    .navigation__link:hover::after{
+        width: 0;
     }
 }
