@@ -214,7 +214,7 @@
     }
 
     .navigation__button{
-        margin-left: 40vw;
+        justify-self: center;
     }
 
     .navigation__link_button::before {
