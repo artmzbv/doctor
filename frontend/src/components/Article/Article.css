@@ -11,3 +11,7 @@
     width: 200px;
     height: 200px;
 }
+
+.article__description{
+    white-space: pre-wrap;
+}
