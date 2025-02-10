@@ -146,13 +146,13 @@
 /* Individual dropdown item */
 .navigation__dropdown-item {
     background-color: white;
-    color: black;
+    /* color: black; */
     margin: 10px auto;
     list-style-type: none;
     width: 100%;
 }
 
-/* Dropdown button (inside each dropdown item) */
+/* Dropdown button (inside each dropdown item)
 .navigation__dropdown-button {
     text-decoration: none;
     background-color: inherit;
@@ -162,7 +162,7 @@
     font-family: Montserrat;
     position: relative;
     cursor: pointer;
-}
+} */
 
 /* Underline animation specifically for dropdown items */
 .navigation__dropdown-link::after {
@@ -182,9 +182,9 @@
 }
 
 /* Hover text color change for dropdown links */
-.navigation__dropdown-link:hover {
+/* .navigation__dropdown-link:hover {
     color: black;
-}
+} */
 
 /* Social network section (hidden by default) */
 .navigation__network {
@@ -305,14 +305,14 @@
         text-align: center;
     }
 
-    .navigation__phone {
+    /* .navigation__phone {
         width: 200px;
         margin: 0;
         height: 20px;
         font-size: 16px;
         font-weight: bold;
         color: black;
-    }
+    } */
 
     /* Apply bottom border when submenu is active */
     .navigation__link_button.navigation__link_active {
