@@ -11,7 +11,6 @@ const PrivacyPolicy = () => {
       <div className="privacy-policy">
         <h1>Политика конфиденциальности</h1>
         <p><em>Последнее обновление: 10.02.2025</em></p>
-
         <section>
           <h2>1. Введение</h2>
           <p>
