@@ -5,7 +5,6 @@
     font-weight: bold;
     font-family: inherit;
     line-height: 18px;
-    /* font-weight: bold; */
     text-decoration: none;
     cursor: pointer;
     position: relative;
@@ -13,6 +12,15 @@
     border: none;
     margin-bottom: 10px;
     padding: 0;
+}
+
+.navigation__left,
+.navigation__right {
+  min-width: 31vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navigation__logo{
@@ -225,7 +233,11 @@
     .navigation__link_active {
         color: #FF9900;
     }
-    /* ыфвфы */
+
+    .navigation__logo{
+        display: none;
+    }
+
     .navigation__button-undropped:before {
         position: absolute;
         content: " ";

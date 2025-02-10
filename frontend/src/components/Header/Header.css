@@ -40,9 +40,7 @@
 
 
 .header__logo{
-    height: 60px;
-    width: 100px;
-    object-fit:fill;
+    display: none;
 }
 
 
@@ -187,8 +185,11 @@
 }
 
 .header__logo{
-    height: 65px;
-    /* height: calc(var(--vh, 1vh) * 10); */
+    display: block;
+    width: 200px;
+    height: 40px;
+    cursor: pointer;
+    object-fit: fill;
 }
 .header__links-row {
     display: none;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-// import headerLogo from "../../images/logo/logo_new.jpg";
+import headerLogo from "../../images/headerLogo.svg";
 // import headerLogo from "../../images/logo/logo.png";
 import "./Header.css";
 import BurgerMenu from "../Navigation/Navigation";
@@ -31,7 +31,7 @@ export default function Header({ activeSection, setActiveSection }) {
   return (
     <>
       <header className="header">
-        {/* <Link to="/">
+        <Link to="/doctor">
           <img
             id={"0"}
             className="header__logo"
@@ -39,7 +39,7 @@ export default function Header({ activeSection, setActiveSection }) {
             alt="logo"
             onClick={handleLogoClick} // Use handleLogoClick for scrolling
           />
-        </Link> */}
+        </Link>
         {!isShowMenu ? (
           <>
             <div className="header__navigation">

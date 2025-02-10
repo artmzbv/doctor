@@ -61,6 +61,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
 
   return (
     <>
+      <div className="navigation__left">
       <button
         id="1"
         className={`navigation__link navigation__link_main ${activeSection === "help" && location.pathname === "/" ? "navigation__link_active" : ""}`}
@@ -82,6 +83,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
       >
         Обо мне
       </button>
+      </div>
         <Link to="/doctor">
           <img
             id={"0"}
@@ -90,6 +92,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
             alt="logo"
           />
         </Link>
+        <div className="navigation__right">
       <button
         id="4"
         className={`navigation__link navigation__link_main ${activeSection === "blog" && location.pathname === "/" ? "navigation__link_active" : ""}`}
@@ -105,16 +108,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
         Контакты
       </button>
       <Button value={"Записаться на прием"} type={"schedule"}/>
-      {/* BOOK NOW button should navigate to a different page and close menu */}
-      {/* <Button
-        book={true}
-        type={"time"}
-        value={"BOOK NOW"}
-        onClick={() => {
-          handleCloseBurgerMenu(); // Close the menu first
-          navigate("/book-now");   // Then navigate to the booking page
-        }}
-      /> */}
+      </div>
     </>
   );
 }
