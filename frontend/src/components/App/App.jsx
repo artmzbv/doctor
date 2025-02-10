@@ -10,6 +10,9 @@ import Lecture from "../Lecture/Lecture"
 import Article from "../Article/Article"
 import TimeBooking from "../TimeBooking/TimeBooking";
 import LectureBooking from "../LectureBooking/LectureBooking";
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
+import CookiePolicy from "../CookiePolicy/CookiePolicy";
+import TermsOfUse from "../TermsOfUse/TermsOfUse";
 import { usePageTracking } from "../../utils/tracking";
 
 function App() {
@@ -28,6 +31,9 @@ function App() {
       <Route path="/time-booking" element={<TimeBooking />} />
       <Route path="/lecture-booking" element={<LectureBooking />} />
       <Route path="/articles/:id" element={<Article />} />
+      <Route path="/cookie-policy" element={<CookiePolicy />} />
+      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+      <Route path="/terms-of-use" element={<TermsOfUse />} />
       </Routes>
     <Footer/>
     </div>
