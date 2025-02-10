@@ -108,7 +108,7 @@ function Navigation({ activeSection, isShowMenu, setIsShowMenu }) {
         Контакты
       </button>
       <div className="navigation__button">
-      <Button value={"Записаться на прием"} type={"schedule"}/>
+      <Button value={"Записаться на прием"} type={"schedule"}  onClick={() => handleCloseBurgerMenu()}/>
       </div>
       </div>
     </>
